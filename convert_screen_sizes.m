@@ -28,13 +28,26 @@ screen_distance = 635;
 [stim_degrees, stim_mm] = px2deg(stimuli_height, screenX, screen_distance, screenXmm)
 % Apparently, correct values are: 100px = 3.6080°, and 133px = 4.7974°
 
+
+
 %% Test px2deg2 function with exp05 settings:
 stim_size_px = [100, 133];
 screen_size_px = [800, 600];
 screen_distance_mm = [635];
 screen_size_mm = [320, 240];
 stim_center_px = [400, 300];
-[stim_size_deg, stim_size_mm] = px2deg2(stim_size_px, screen_size_px, screen_distance_mm, screen_size_mm, stim_center_px)
+[stim_size_deg, stim_size_mm] =...
+    px2deg2(stim_size_px, screen_size_px, screen_distance_mm, screen_size_mm, stim_center_px)
+
+%% Test deg2px2 function with exp05 settings:
+stim_size_deg = [3.6080, 4.7974];
+screen_size_px = [800, 600];
+screen_distance_mm = [635];
+screen_size_mm = [320, 240];
+stim_center_deg = [0, 0];
+[stim_size_px, stim_size_mm, stim_center_px] =...
+    deg2px2(stim_size_deg, screen_size_px, screen_distance_mm, screen_size_mm, stim_center_deg)
+
 
 
 

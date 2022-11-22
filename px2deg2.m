@@ -1,4 +1,5 @@
-function [stim_size_deg, stim_size_mm] = px2deg2(stim_size_px, screen_size_px, screen_distance_mm, screen_size_mm, stim_center_px)
+function [stim_size_deg, stim_size_mm] =...
+    px2deg2(stim_size_px, screen_size_px, screen_distance_mm, screen_size_mm, stim_center_px)
 % 
 % Arguments:
 %           stim_center_px : 1 x 2 matrix, with x and y pixels (measured
